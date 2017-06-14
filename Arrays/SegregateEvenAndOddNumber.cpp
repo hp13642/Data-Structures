@@ -3,6 +3,18 @@
 //Solution approach-
 //take two index one from left and one from right side while taking input place even number from left side and odd number from right side
 //Then sort the left part of array that contain even numbers and then sort right part of array that contain odd array
+//Time Complexity O(nlogn)
+
+
+/*Method-2
+1) Initialize two index variables left and right:  
+            left = 0,  right = size -1 
+2) Keep incrementing left index until we see an odd number.
+3) Keep decrementing right index until we see an even number.
+4) If lef < right then swap arr[left] and arr[right]
+Time Complexity O(n)
+*/
+
 
 #include<bits/stdc++.h>
 #define ll long long int
@@ -40,3 +52,31 @@ int main()
 	}
 	return 0;
 }
+
+
+
+//Code for Method-2
+void segregateEvenOdd(int arr[], int size)
+{
+    /* Initialize left and right indexes */
+    int left = 0, right = size-1;
+    while (left < right)
+    {
+        /* Increment left index while we see 0 at left */
+        while (arr[left]%2 == 0 && left < right)
+            left++;
+ 
+        /* Decrement right index while we see 1 at right */
+        while (arr[right]%2 == 1 && left < right)
+            right--;
+ 
+        if (left < right)
+        {
+            /* Swap arr[left] and arr[right]*/
+            swap(&arr[left], &arr[right]);
+            left++;
+            right--;
+        }
+    }
+}
+
