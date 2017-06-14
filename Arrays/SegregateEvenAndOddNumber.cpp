@@ -7,6 +7,7 @@
 
 
 /*Method-2
+In this method odd and even numbr segregate but they might can not be in sorted order
 1) Initialize two index variables left and right:  
             left = 0,  right = size -1 
 2) Keep incrementing left index until we see an odd number.
