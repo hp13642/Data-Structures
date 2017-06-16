@@ -5,6 +5,12 @@ Solution Approach-
 1-Delete all such node in single pass if any node got deleted then update the update variable as true 
 2- repeat step 1 until update variable got false then it break
 
+
+Another Best Approach-
+Algorithm-
+1. Reverse the list.
+2. Traverse the reversed list. Keep max till now. If next node < max, then delete the next node, 
+    otherwise max = next node. 3. Reverse the list again to retain the original order. Time Complexity: O(n) 
 */
 
 /*
