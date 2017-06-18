@@ -4,7 +4,13 @@
 //traverse the given list and correspoding to element insert that node in corresponding linked list
 //after traverseing comlete linked list merge all three linked list in order 0 1 and 2
 //In the end project back the result in given linked list by copying the element of resulttant single linked list to original one
-
+/*
+Method -2
+A much better method-
+Following steps can be used to sort the given linked list.
+1) Traverse the list and count the number of 0s, 1s and 2s. Let the counts be n1, n2 and n3 respectively.
+2) Traverse the list again, fill the first n1 nodes with 0, then n2 nodes with 1 and finally n3 nodes with 2.\
+*/
 
 /*
   Sort the list of 0's,1's and 2's
