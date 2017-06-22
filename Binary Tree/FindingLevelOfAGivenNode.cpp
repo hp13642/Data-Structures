@@ -1,4 +1,5 @@
 //Find level of a given node in binary tree assume root is at level 1
+//If Node is not foun in tree then return -1
 
 /*
 Structure of the node of the binary tree is
@@ -13,7 +14,7 @@ struct Node
 int getLevel(struct Node *root, int target)
 {
     if(!root)
-        return 0;
+        return -1;
     queue<Node *> Q;
     Q.push(root);
     int level=0;
@@ -32,4 +33,5 @@ int getLevel(struct Node *root, int target)
                 Q.push(temp->right);
         }
     }
+	return -1;
 }
