@@ -8,7 +8,7 @@
 // Should reverse list and return new head.
 Node* reverse(Node *head)
 {
-    if(head->next==NULL)
+    if(head==NULL || head->next==NULL)
         return head;
     struct Node *c=head,*n=head->next,*t;
     c->next=NULL;
