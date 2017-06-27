@@ -17,13 +17,16 @@ public:
         while(1){
             while(root){
                 st.push(root);
+                //Go to left subtree and keep on adding to stack
                 root=root->left;
             }
             if(st.empty())
                 break;
             root=st.top();
             st.pop();
+            //after poping process current node
             inorder.push_back(root->val);
+            //indicates completion of current node and left subtree now go to right subtree
             root=root->right;
         }
         return inorder;
